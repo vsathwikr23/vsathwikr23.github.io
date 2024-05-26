@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en" class="no-js">
+
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -207,6 +208,23 @@
             .education-details-content ul li {
                 margin-bottom: 5px;
             }
+
+        .scroll-to-top {
+            display: none;
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            background-color: #000;
+            color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            justify-content: center;
+            align-items: center;
+            font-size: 24px;
+            z-index: 1000;
+            cursor: pointer;
+        }
     </style>
     <link rel="stylesheet" href="css/vendor.css">
     <link rel="stylesheet" href="css/styles.css">
@@ -215,6 +233,7 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
     <link rel="manifest" href="site.webmanifest">
 </head>
+
 <body id="top">
     <div id="preloader">
         <div id="loader" class="dots-fade">
@@ -283,10 +302,8 @@
             <div class="row s-intro__content">
                 <div class="column xl-12">
                     <img style="height:250px;width:250px;margin-top: -150px;" src="me-circle.png" alt="Profile Image">
-                    <h2 style="color:white;margin:20px;">
-                        Hello, I am <span class="highlight-name">Sathwik Velmala</span>
-                    </h2>
-                    <p class="s-intro__desc lead" style="text-align:center;"> | Analytics Developer | Dataphile | <br> | Data Science Graduate | </p>
+                    <h2 style="color:white;margin:20px;">Hello, I am <span class="highlight-name">Sathwik Velmala</span></h2>
+                    <p class="s-intro__desc lead" style="text-align:center;">| Analytics Developer | Dataphile | <br> | Data Science Graduate | </p>
                     <br />
                     <a href="#about" id="more-about-me" class="scroll-btn">More about me</a>
                     <ul class="s-header__nav-social social-list" style="display: flex; justify-content: center; list-style: none; padding: 0; list-style: none;">
@@ -434,20 +451,14 @@
                             </li>
                         </ul>
                     </div>
-                </div>
-                <div class="ss-go-top">
-                    <a class="smoothscroll" title="Back to Top" href="#top">
-                        <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                            <path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero" />
-                        </svg>
-                    </a>
-                    <span>Back To Top</span>
-                </div>
             </footer>
+        </section>
+    </div>
+    <div class="scroll-to-top" style="font-weight: 900; border: 2px solid #ddd;" id="scrollToTop">
+        &#8593;
     </div>
     <script src="js/plugins.js"></script>
     <script src="js/main.js"></script>
-    <!-- Smooth Scroll JavaScript -->
     <script>
         document.getElementById('more-about-me').addEventListener('click', function (event) {
             event.preventDefault();
@@ -455,6 +466,23 @@
                 behavior: 'smooth'
             });
         });
+
+        var scrollToTopButton = document.getElementById('scrollToTop');
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 300) {
+                scrollToTopButton.style.display = 'flex';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
+
+        scrollToTopButton.addEventListener('click', function () {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
     </script>
 </body>
+
 </html>
