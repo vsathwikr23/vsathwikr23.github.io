@@ -3155,28 +3155,27 @@ body.menu-is-open {
 .s-header__nav {
     --nav-logo-width: 12rem;
     --nav-text-color: var(--color-gray-16);
-    --box-shadow    : 4px 0 4px rgba(0, 0, 0, 0.05),
-                      8px 0 8px rgba(0, 0, 0, 0.05),
-                      16px 0 16px rgba(0, 0, 0, 0.05),
-                      32px 0 32px rgba(0, 0, 0, 0.05);
-    z-index                   : 301;
-    display                   : flex;
-    flex-direction            : column;
-    background                : #121212;
-    color                     : var(--nav-text-color);
-    font-family               : var(--font-2);
-    padding                   : var(--vspace-1_25) var(--vspace-1_25);
-    height                    : 100vh;
-    width                     : min(96%, 42rem);
-    box-shadow                : var(--box-shadow);
-    transform                 : translateX(-100%);
-    overflow-y                : auto;
-    transition-property       : transform;
-    transition-duration       : 0.4s;
+    --box-shadow background-image : url(../images/intro-bg-3000.jpg);
+    4px 0 4px rgba(0, 0, 0, 0.05), 8px 0 8px rgba(0, 0, 0, 0.05), 16px 0 16px rgba(0, 0, 0, 0.05), 32px 0 32px rgba(0, 0, 0, 0.05);
+    z-index: 301;
+    display: flex;
+    flex-direction: column;
+    background: #121212;
+    color: var(--nav-text-color);
+    font-family: var(--font-2);
+    padding: var(--vspace-1_25) var(--vspace-1_25);
+    height: 100vh;
+    width: min(96%, 42rem);
+    box-shadow: var(--box-shadow);
+    transform: translateX(-100%);
+    overflow-y: auto;
+    transition-property: transform;
+    transition-duration: 0.4s;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
-    position                  : fixed;
-    top                       : 0;
-    left                      : 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-image: url(../images/4.jpg);
 }
 
 .s-header__nav-bottom {
@@ -3313,7 +3312,7 @@ body.menu-is-open {
 .s-header__nav-social {
     margin-top : var(--vspace-1);
     padding-top: var(--vspace-0_5);
-    border-top : 1px solid rgba(255, 255, 255, 0.05);
+    /*border-top : 1px solid rgba(255, 255, 255, 0.05);*/
 }
 
 .s-header__nav-social svg {
@@ -3530,15 +3529,14 @@ body.menu-is-open {
  *
  * ------------------------------------------------------------------- */
 .s-intro {
-    --content-padding-top   : max(12rem, 10vh);
+    --content-padding-top: max(12rem, 10vh);
     --content-padding-bottom: 8rem;
-    --content-min-height    : calc(var(--vspace-1) * 26);
-    z-index                 : 2;
+    --content-min-height: calc(var(--vspace-1) * 26);
+    z-index: 2;
     background-color        : var(--color-gray-19);
-    width                   : 100%;
-    height                  : max(var(--content-min-height), 100vh);
-    overflow                : hidden;
-    position                : relative;
+    height: max(var(--content-min-height), 100vh);
+    overflow: hidden;
+    position: relative;
 }
 
 /* --------------------------------------------------------------------
@@ -3639,6 +3637,10 @@ body.menu-is-open {
     margin-left: 0.5em;
 }
 
+.highlight-name{
+    color: orange;
+    font-family: 'Palatino Linotype';
+}
 .s-intro__title {
     color      : var(--color-body-bg);
     font-weight: 700;
@@ -3659,7 +3661,8 @@ body.menu-is-open {
     z-index : 2;
     position: absolute;
     bottom  : var(--vspace-1);
-    right   : var(--gutter);
+    right:40%;
+    left:40%;
 }
 
 .s-intro__scroll-down a {
