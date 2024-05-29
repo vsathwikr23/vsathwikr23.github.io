@@ -3662,7 +3662,7 @@ body.menu-is-open {
     position: absolute;
     bottom  : var(--vspace-1);
     right:40%;
-    left:40%;
+    left:40%;   
 }
 
 .s-intro__scroll-down a {
