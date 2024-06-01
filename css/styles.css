@@ -3347,6 +3347,16 @@ body.menu-is-open {
     transition      : all 0.4s cubic-bezier(0.215, 0.61, 0.355, 1);
 }
 
+.menu-is-open {
+    transition: opacity 0.3s ease-in-out;
+    opacity: 1;
+}
+
+.menu-is-open.menu-closing {
+        opacity: 0;
+        pointer-events: none;
+ }
+
 .menu-is-open .menu-underlay {
     opacity   : 1;
     visibility: visible;

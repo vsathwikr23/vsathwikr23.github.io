@@ -69,38 +69,19 @@
             }
         });
 
-        menuclose.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+        function handleMenuClose(e) {
+            setTimeout(() => {
+                if (siteBody.classList.contains('menu-is-open')) {
+                    siteBody.classList.remove('menu-is-open');
+                }
+            }, 100);
+        }
 
-            if (siteBody.classList.contains('menu-is-open')) {
-                siteBody.classList.remove('menu-is-open');
-            }
-        });
-        menuclose1.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
+        menuclose.addEventListener('click', handleMenuClose);
+        menuclose1.addEventListener('click', handleMenuClose);
+        menuclose2.addEventListener('click', handleMenuClose);
+        menuclose3.addEventListener('click', handleMenuClose);
 
-            if (siteBody.classList.contains('menu-is-open')) {
-                siteBody.classList.remove('menu-is-open');
-            }
-        });
-        menuclose2.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            if (siteBody.classList.contains('menu-is-open')) {
-                siteBody.classList.remove('menu-is-open');
-            }
-        });
-        menuclose3.addEventListener('click', function (e) {
-            e.preventDefault();
-            e.stopPropagation();
-
-            if (siteBody.classList.contains('menu-is-open')) {
-                siteBody.classList.remove('menu-is-open');
-            }
-        });
 
     }; // end ssOffcanvas   
 
