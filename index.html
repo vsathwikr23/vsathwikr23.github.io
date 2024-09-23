@@ -152,6 +152,11 @@
         .education-box2:hover .coursework {
             display: block;
         }
+
+        .education-box3:hover .coursework {
+            display: block;
+        }
+
         .education-box1:hover .coursework {
             display: block;
         }
@@ -173,6 +178,23 @@
             margin-right: 40px;
         }
 
+        .education-box3 {
+            position: relative;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            height: 300px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            background-image: None;
+            background-size: cover;
+            background-position: 20% 44%;
+            opacity: 2.2;
+            color: white;
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+
         .education-box1:hover {
             background-color: #f5f5f5;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
@@ -181,6 +203,13 @@
         }
 
         .education-box2:hover {
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+            z-index: 2;
+        }
+
+        .education-box3:hover {
             background-color: #f5f5f5;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transform: scale(1.02);
@@ -212,6 +241,22 @@
         }
 
         .education-box2 p {
+            margin: 5px 0;
+            font-family: Cooper;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .education-box3 h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-family: Cooper;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .education-box3 p {
             margin: 5px 0;
             font-family: Cooper;
             color: white;
@@ -405,16 +450,18 @@
                     </div>
                     <div class="s-about__content-main">
                         <p class="attention-getter" style="text-align:justify; font-size:25px;"> Hi! My name is Sathwik, an Analytics Developer from India and a University of Houston graduate with a Master's in Data Science. Driven by a passion for learning new things, I have chosen to pursue a career in data. </p>
-                        <h3> Technical Skills</h3>
-                        <p class="attention-getter" style=" font-size:25px;">
-                            <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, OracleDB. <br />
-                            <b>Programming Languages:</b> Python, C, Java, JavaScript, SQL <br />
-                            <b>Web Technologies & Frameworks: </b>HTML, CSS, Django, Flask <br />
-                            <b>Visualizing tools: </b>Tableau, Microsoft PowerBi, Spotfire <br />
+                        <h3>Skills and Certifications</h3>
+                        <p class="attention-getter" style=" font-size:20px;">
+                            <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, SQL Server, OracleDB. <br />
+                            <b>Programming Languages:</b> Python, C, Java, C#, JavaScript, Matlab, SQL <br />
+                            <b>Web Technologies & Frameworks:</b> HTML, CSS, Django, Flask, jQuery <br />
+                            <b>Machine Learning and Deep Learning:</b> Keras, TensorFlow, PyTorch, NumPy, Pandas, OpenCV, sci-kit
+                            learn, Convolutional Neural Networks, Natural Language Processing, Dlib, seaborn, Matplotlib, SciPy. <br />
+                            <b>Big Data Frameworks: </b>Hadoop, Spark <br />
+                            <b>Data Visualization tools: </b>Tableau, Microsoft PowerBi, Spotfire <br />
                             <b>Cloud platforms: </b>GCP, AWS, Azure <br />
-                            <b>Machine Learning: </b>Keras, TensorFlow, CNN, PyTorch, NumPy, Pandas, sci-kit-learn, cv2 <br />
-                            <b>Big Data Technologies: </b>Hadoop, Spark <br />
-                            <b>Version Control: </b>Git
+                            <b>Version Control: </b>Git <br />
+                            <b>Google Cloud Platform Certification</b> in Architecting with Google Compute Engine
                         </p>
                         <div class="s-about__content-btn">
                             <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium u-fullwidth">Download Resume</a>
@@ -442,48 +489,61 @@
                 <p>University of Houston, Houston, TX</p>
                 <p>January 2023 - May 2024</p>
                 <div class="coursework">
-                    <p style="font-family: Arial;font-size: 15px; color: black;">Related Coursework: Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering</p>
+                    <p style="font-family: Arial;font-size: 15px; color: black;">
+                    <b>Related Coursework: </b>Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering</p>
                 </div>
             </div>
             <div class="education-box2" style="background-color: #4682B4; ">
                 <h3>Analytics Developer</h3>
                 <p>SAFERTEK IT SOLUTIONS PVT LTD</p>
-                <p>August 2020 - Novemeber 2022</p>
+                <p>August 2020 - December 2022</p>
                 <div class="coursework">
                     <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
                         <b>Roles and Responsibilities:</b><br />
-                        Developed an ERP product UWareOne, and its services using Python and Django-Rest
-                        framework respectively to enable seamless integration with third-party services and internal
-                        systems.<br />
-                        Accelerated early development of beta version by participating in agile development processes,
-                        including sprint planning and daily stand-ups; slashing deployment times by 40%, leading to a
-                        30% improvement in performance and a better user experience.<br />
-                        Led a cross-functional team in complex data structures migration from SQL Server to MariaDB,
-                        ensuring data integrity and minimal downtime by schema normalization.<br />
-                        Implemented caching mechanisms and database indexing strategies to enhance query
-                        performance and optimize excess server load.<br />
-                        Designed and deployed completely functional reports on SSRS and custom dashboards using
-                        Tableau and Python libraries such as Seaborn and Matplotlib to visualize key performance
-                        indicators, empowering stakeholders to make data-driven decisions, leading to boosting
-                        customer satisfaction rates by 35%.<br />
-                        Collaborate with other teams to make sure analytics tools are integrated properly with
-                        UWareOne functionalities and optimize their performance to handle large datasets while
-                        minimizing latency and improving user experience.
+                        Developed a web ERP product UWareOne using Python and Django-Rest framework to enable seamless
+                        integration with third-party services, supporting over 10,000 users and boosting efficiency by 30%.<br />
+                        Accelerated development of beta version through agile processes including sprint planning and daily
+                        stand-ups, cutting deployment times by 40% and improving performance and user experience by 30%. <br />
+                        Led a cross-functional team in migrating 99% of complex data structures from SQL Server to MariaDB,
+                        ensuring data integrity and minimal downtime by schema normalization. <br />
+                        Implemented caching mechanisms and database indexing strategies to improve query performance by
+                        60% and reduce the server load by 40%. Automated repetitive tasks and processes using Python, Bash. <br />
+                        Designed and deployed reports and dashboards using SSRS, Tableau, and Python libraries (Seaborn,
+                        Matplotlib), enabling data-driven decisions for stakeholders and boosting customer satisfaction by 35%. <br />
+                        Collaborated with development teams to integrate analytics tools with UWareOne, optimizing performance
+                        to handle large datasets, which led to a 50% reduction in data latency and enhanced user experience.
                     </p>
                 </div>
             </div>
+
+            <div class="education-box3"  style="background-color: #4682B4; ">
+                <h3>Data Analyst Intern</h3>
+                <p>GITCORE Technologies, Hyderabad, India</p>
+                <p>December 2019 - July 2020</p>
+                <div class="coursework">
+                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                        <b>Roles and Responsibilities:</b><br />
+                        Analysed data using statistical techniques and tools like Python, PowerBi and Excel to discover trends and
+                        patterns in data. <br />
+                        Ensured data integrity by checking for errors, missing values and inconsistencies and documenting any
+                        issues found. <br />
+                        Maintained detailed documentation of different processes, methodologies, and data analysis results.
+                    </p>
+                </div>
+            </div>
+
             <div class="education-box1">
                 <h3>Bachelor of Technology in Computer Science</h3>
                 <p>Malla Reddy Engineering College, Hyderabad, India</p>
                 <p>August 2017 - June 2021</p>
                 <div class="coursework">
                     <p style="font-family: Arial;font-size: 15px; color:black;">
-                        Related Coursework: Machine Learning, Big Data Analytics, Database Management Systems, Object
-                        Oriented Programming
+                        <b>Related Coursework:</b>
+                        Machine Learning, Big Data Analytics, Database Management Systems, Object Oriented Programming
                     </p>
                 </div>
             </div>
-            </section>
+        </section>
 
         <!-- ========================================================================= -->
 
@@ -604,13 +664,13 @@
                         <div class="row">
                             <div class="column xl-6 lg-12">
                                 <h5>Location</h5>
-                                <p> Houston, Texas - 77054 </p>
+                                <p> Houston, Texas - 77025 </p>
                             </div>
                             <div class="column xl-6 lg-12">
                                 <h5>Contact</h5>
                                 <ul class="link-list">
                                     <li>
-                                        <a href="mailto:vsathwikr23@gmail.com">vsathwikr23@gmail.com</a>
+                                        <a href="mailto:sathwik.velmala@outlook.com">sathwik.velmala@outlook.com</a>
                                     </li>
                                     <li>
                                         <a href="tel:+17374446526">+1 (737) 444-6526</a>
