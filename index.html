@@ -10,8 +10,29 @@
         document.documentElement.classList.add('js');
     </script>
     <style>
-        .s-intro {
+
+        body {
             background-image: url('images/4.jpg');
+            background-size: cover; /* Ensures the image covers the full viewport */
+            background-position: center; /* Centers the image */
+            background-attachment: fixed; /* Keeps the background fixed while scrolling */
+            background-repeat: no-repeat; /* Prevents the image from repeating */
+        }
+
+        .nav-menu {
+            overflow: hidden;
+        }
+          
+        .nav-menu::-webkit-scrollbar {
+            display: none;
+        }
+
+        .s-header__nav {
+            overflow: hidden;
+        }
+
+        .s-header__nav::-webkit-scrollbar {
+            display: none;
         }
 
         .linkedin-icon:hover .linkedin-icon-svg {
@@ -91,8 +112,8 @@
             background-image: url('images/uh1.jpg');
             background-size: cover;
             background-position: 30% 54%;
-            margin-left: 40px;
-            margin-right: 40px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
             .education-box:hover {
@@ -146,8 +167,8 @@
             background-image: url('images/mr1.png');
             background-size: cover;
             background-position: 20% 44%;
-            margin-left: 40px;
-            margin-right: 40px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
         .education-box2:hover .coursework {
             display: block;
@@ -174,8 +195,8 @@
             background-position: 20% 44%;
             opacity: 2.2;
             color: white;
-            margin-left: 40px;
-            margin-right: 40px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
         .education-box3 {
@@ -191,8 +212,8 @@
             background-position: 20% 44%;
             opacity: 2.2;
             color: white;
-            margin-left: 40px;
-            margin-right: 40px;
+            margin-left: 10%;
+            margin-right: 10%;
         }
 
         .education-box1:hover {
@@ -357,6 +378,9 @@
                         <a href="#intro" class="menuclose">About</a>
                     </li>
                     <li>
+                        <a href="#skills" class="menuclose4">Skills</a>
+                    </li>
+                    <li>
                         <a href="#edu-exp" class="menuclose1">Experience</a>
                     </li>
                     <li>
@@ -396,13 +420,13 @@
                 </div>
             </nav>
         </header>
-        <section id="intro" class="s-intro">
+        <section id="intro" class="s-intro" style="background-image: url('images/4.jpg');">
             <div class="row s-intro__content">
                 <div class="column xl-12">
                     <br /><br />
                     <img style="height:250px;width:250px;margin-top: -150px;" src="me-circle.png" alt="Profile Image">
                     <h2 style="color:white;margin:20px;">Hello, I am <span class="highlight-name">Sathwik Velmala</span></h2>
-                    <p class="s-intro__desc lead" style="text-align:center;">| Analytics Developer | Dataphile | <br> | Data Science Graduate | </p>
+                    <p class="s-intro__desc lead" style="text-align:center;">| Software Developer | Dataphile | <br> | Data Science Graduate | </p>
                     <br />
                     <a href="#about" id="more-about-me" class="scroll-btn">More about me</a>
                     <ul class="s-header__nav-social social-list" style="display: flex; justify-content: center; list-style: none; padding: 0; list-style: none;">
@@ -434,283 +458,341 @@
                 </div>
             </div>
         </section>
-        <section id="about" class="s-about">
-            <div class="row s-about__content">
-                <div class="column xl-12 s-about__content-grid grid-block">
-                    <div class="s-about__content-header section-header">
-                        <h3 class="text-display-title with-line" style="font-size: 80px;">About me</h3>
-                        <div class="s-about__content-header-inner">
-                            <p class="text-desc">
-                                Full Name: Sathwik Reddy Velmala <br /> Preferred Name: Sathwik <br /> Date of Birth: 05/08/2000 <br /> Nationality: Indian <br />
-                            </p>
-                            <div class="s-about__content-media">
-                                <img class="s-about__media-big" src="images/my_1.jpg" srcset="images/my_1.jpg 1x" alt="">
-                            </div>
+        <!--<section id="about" class="s-about">
+        <div class="row s-about__content">
+            <div class="column xl-12 s-about__content-grid grid-block">
+                <div class="s-about__content-header section-header">
+                    <h3 class="text-display-title with-line" style="font-size: 80px;">About me</h3>
+                    <div class="s-about__content-header-inner">
+
+                        <div class="s-about__content-media">
+                            <img class="s-about__media-big" src="images/my_1.jpg" srcset="images/my_1.jpg 1x" alt="">
                         </div>
                     </div>
-                    <div class="s-about__content-main">
-                        <p class="attention-getter" style="text-align:justify; font-size:25px;"> Hi! My name is Sathwik, an Analytics Developer from India and a University of Houston graduate with a Master's in Data Science. Driven by a passion for learning new things, I have chosen to pursue a career in data. </p>
-                        <h3>Skills and Certifications</h3>
-                        <p class="attention-getter" style=" font-size:20px;">
+                </div>
+                <div class="s-about__content-main">
+                    <p class="attention-getter" style="text-align:justify; font-size:25px;"> Hi! My name is Sathwik, a Software Developer from India and a University of Houston graduate with a Master's in Data Science. Driven by a passion for learning new things, I have chosen to pursue a career in data. </p>
+                    <h3>Skills and Certifications</h3>
+                    <p class="attention-getter" style=" font-size:20px;">
+                        <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, SQL Server, OracleDB. <br />
+                        <b>Programming Languages:</b> Python, C, Java, C#, JavaScript, Matlab, SQL <br />
+                        <b>Web Technologies & Frameworks:</b> HTML, CSS, Django, Flask, jQuery <br />
+                        <b>Machine Learning and Deep Learning:</b> Keras, TensorFlow, PyTorch, NumPy, Pandas, OpenCV, sci-kit
+                        learn, Convolutional Neural Networks, Natural Language Processing, Dlib, seaborn, Matplotlib, SciPy. <br />
+                        <b>Big Data Frameworks: </b>Hadoop, Spark <br />
+                        <b>Data Visualization tools: </b>Tableau, Microsoft PowerBi, Spotfire <br />
+                        <b>Cloud platforms: </b>GCP, AWS, Azure <br />
+                        <b>Version Control: </b>Git <br />
+                        <b>Google Cloud Platform Certification</b> in Architecting with Google Compute Engine
+                    </p>
+                    <div class="s-about__content-btn">
+                        <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium u-fullwidth">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section> -->
+        <section id="about" class="s-about" style="background-color: white; max-width: 1200px; border-radius: 5px; margin: 50px auto; padding-bottom: 80px; padding-top: 80px;">
+            <div class="row s-about__content">
+                <!-- About me Block -->
+                <div class="column xl-12 s-about__content-grid">
+                    <div class="s-about__content-header section-header">
+                        <h3 class="text-display-title with-line" style="font-size: 60px; text-align: center;">About Me</h3>
+                    </div>
+
+                    <div class="s-about__content-main grid-block" style="display: flex; align-items: center; gap: 20px;">
+                        <!-- Photo Block -->
+                        <div class="s-about__content-media" style="flex: 1; max-width: 40%;">
+                            <img class="s-about__media-big" src="images/my_1.jpg" srcset="images/my_1.jpg 1x" alt="Sathwik's photo" style="width: 100%; border-radius: 0px;">
+                        </div>
+
+                        <!-- About Me Text Block -->
+                        <div class="s-about__content-text" style="flex: 1; max-width: 60%;">
+                            <p class="attention-getter" style="text-align: justify; font-size: 20px; line-height: 1.4;">
+                                With over 30 months of professional experience as a Software Developer at SAFERTEK IT Solutions and a Data Analyst at Gitcore Solutions,
+                                I have a proven track record of developing an ERP product and providing data driven insights to different clients based on the provided data. <br /><br />My expertise includes Software Development using Python, DJango and REST framework, Database Management using SQL Server, MySQL, OracleDB,
+                                Analysing complex datasets using visualization tools like Python, Excel, Tableau and PowerBi, leveraging Data Analytics using Spark and Hadoop and various data science projects including Object Detection, Facial Reconstruction, Analysing Disaster Tweets.
+                                <br /><br /> I also have a strong academic background with a Masters degree in Data Science from the University of Houston. I am passionate about applying my knowledge in data science to generate insights that promote real-world impact, helping organizations make key strategic decisions.
+                                <br /><br /> Apart from this, I have a strong enthusiam for sports especially basketball, football and cricket. I also love watching movies and exploring various cuisines of food from all around the world.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="s-about__content-btn" style="display: flex; justify-content: center; align-items: center;">
+                        <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium">Download Resume</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-------- Skills and Certifications Section-->
+
+        <section id="skills" class="s-menublock4" style="background-color: white; border-radius: 5px; margin: 50px; padding-bottom: 80px; padding-top: 80px;">
+            <div class="row s-about__content">
+                <!-- Skills and Certifications Block -->
+                <div class="column xl-12 s-about__content-grid">
+                    <div class="s-about__skills-header section-header">
+                        <h3 class="text-display-title with-line" style="font-size: 60px; text-align: center;">Skills and Certifications</h3>
+                    </div>
+
+                    <div class="s-about__skills-content" style="padding: 20px; font-size: 20px;">
+                        <p>
                             <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, SQL Server, OracleDB. <br />
                             <b>Programming Languages:</b> Python, C, Java, C#, JavaScript, Matlab, SQL <br />
                             <b>Web Technologies & Frameworks:</b> HTML, CSS, Django, Flask, jQuery <br />
                             <b>Machine Learning and Deep Learning:</b> Keras, TensorFlow, PyTorch, NumPy, Pandas, OpenCV, sci-kit
                             learn, Convolutional Neural Networks, Natural Language Processing, Dlib, seaborn, Matplotlib, SciPy. <br />
-                            <b>Big Data Frameworks: </b>Hadoop, Spark <br />
-                            <b>Data Visualization tools: </b>Tableau, Microsoft PowerBi, Spotfire <br />
-                            <b>Cloud platforms: </b>GCP, AWS, Azure <br />
-                            <b>Version Control: </b>Git <br />
+                            <b>Big Data Frameworks:</b> Hadoop, Spark <br />
+                            <b>Data Visualization tools:</b> Tableau, Microsoft PowerBi, Spotfire <br />
+                            <b>Cloud platforms:</b> GCP, AWS, Azure <br />
+                            <b>Version Control:</b> Git <br />
                             <b>Google Cloud Platform Certification</b> in Architecting with Google Compute Engine
                         </p>
-                        <div class="s-about__content-btn">
-                            <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium u-fullwidth">Download Resume</a>
-                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <!-- # menu block
-          ================================================== -->
-        <section id="edu-exp" class="s-menublock">
-            <div class="row s-menublock__top">
-                <div class="column xl-8 lg-12">
-                    <div class="s-menublock__content-header section-header">
-                        <h3 class="text-display-title with-line" style="font-size:70px;">
-                            <b>Education and Experience</b>
-                        </h3>
-                    </div>
-                    <!-- end s-menublock__content-header -->
-                </div>
-            </div>
-            <!-- end s-menublock__top -->
-            <div class="education-box">
-                <h3>Master of Science in Data Science</h3>
-                <p>University of Houston, Houston, TX</p>
-                <p>January 2023 - May 2024</p>
-                <div class="coursework">
-                    <p style="font-family: Arial;font-size: 15px; color: black;">
-                    <b>Related Coursework: </b>Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering</p>
-                </div>
-            </div>
-            <div class="education-box2" style="background-color: #4682B4; ">
-                <h3>Analytics Developer</h3>
-                <p>SAFERTEK IT SOLUTIONS PVT LTD</p>
-                <p>August 2020 - December 2022</p>
-                <div class="coursework">
-                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
-                        <b>Roles and Responsibilities:</b><br />
-                        Developed a web ERP product UWareOne using Python and Django-Rest framework to enable seamless
-                        integration with third-party services, supporting over 10,000 users and boosting efficiency by 30%.<br />
-                        Accelerated development of beta version through agile processes including sprint planning and daily
-                        stand-ups, cutting deployment times by 40% and improving performance and user experience by 30%. <br />
-                        Led a cross-functional team in migrating 99% of complex data structures from SQL Server to MariaDB,
-                        ensuring data integrity and minimal downtime by schema normalization. <br />
-                        Implemented caching mechanisms and database indexing strategies to improve query performance by
-                        60% and reduce the server load by 40%. Automated repetitive tasks and processes using Python, Bash. <br />
-                        Designed and deployed reports and dashboards using SSRS, Tableau, and Python libraries (Seaborn,
-                        Matplotlib), enabling data-driven decisions for stakeholders and boosting customer satisfaction by 35%. <br />
-                        Collaborated with development teams to integrate analytics tools with UWareOne, optimizing performance
-                        to handle large datasets, which led to a 50% reduction in data latency and enhanced user experience.
-                    </p>
-                </div>
-            </div>
 
-            <div class="education-box3"  style="background-color: #DC143C; ">
-                <h3>Data Analyst</h3>
-                <p>GITCORE Technologies, Hyderabad, India</p>
-                <p>December 2019 - July 2020</p>
-                <div class="coursework">
-                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
-                        <b>Roles and Responsibilities:</b><br />
-                        Analysed data using statistical techniques and tools like Python, PowerBi and Excel to discover trends and
-                        patterns in data, resulting in a 15% increase in process efficiency.<br />
-                        Ensured data integrity by checking for errors, missing values, and inconsistencies and documenting any
-                        issues found, thereby increasing the data accuracy by over 40%. <br />
-                        Maintained detailed documentation of processes, methodologies, and data analysis results. <br />
-                        Engaged with cross-functional teams to provide data-driven conclusions and improve operating efficiency. <br />
-                    </p>
-                </div>
-            </div>
-
-            <div class="education-box1">
-                <h3>Bachelor of Technology in Computer Science</h3>
-                <p>Malla Reddy Engineering College, Hyderabad, India</p>
-                <p>August 2017 - June 2021</p>
-                <div class="coursework">
-                    <p style="font-family: Arial;font-size: 15px; color:black;">
-                        <b>Related Coursework:</b>
-                        Machine Learning, Big Data Analytics, Database Management Systems, Object Oriented Programming
-                    </p>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================================================= -->
-
-            <section id ="projects" class="s-menublock" style="margin-top:-20%;">
-
-                <div class="row s-menublock__top">
-                    <div class="column xl-8 lg-12">
-                        <div class="s-menublock__content-header section-header">
-                            <h2 class="text-display-title with-line">Projects</h2>
+                <!-- # menu block
+            ================================================== -->
+                <section id="edu-exp" class="s-menublock" style="background-color: white; border-radius: 5px; margin: 50px; padding-bottom: 80px; padding-top: 80px;">
+                    <div class="row s-menublock__top">
+                        <div class="column xl-8 lg-12">
+                            <div class="s-menublock__content-header section-header">
+                                <h3 class="text-display-title with-line" style="font-size:60px; text-align: center;"> Education and Experience</h3>
+                            </div>
                             <!-- end s-menublock__content-header -->
                         </div>
                     </div>
-                </div> <!-- end s-menublock__top -->
-
-                <div class="row">
-                    <div class="column xl-12 menublock__slider-nav">
-                        <a class="menu-link">All Projects</a>
-
-                        <div class="menublock-buttons">
-                            <div class="menublock-btn-prev">
-                                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero" /></svg>
-                            </div>
-                            <div class="menublock-btn-next">
-                                <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero" /></svg>
-                            </div>
-                        </div>
-                    </div> <!-- end s-menublock__slider-nav -->
-                </div>
-
-                <div class="row s-menublock__slider-wrap">
-                    <div class="column xl-12">
-
-                        <div class="swiper-container s-menublock__slider">
-                            <div class="swiper-wrapper">
-
-                                <div class="s-menublock__slide swiper-slide">
-                                    <div class="menublock-item">
-                                        <div class="menublock-item__thumb">
-                                            <img src="images/facial.jpg" style="width: 400px; height:400px;" alt="">
-                                            <div class="description" style="align-content: center; width:350px; height:200px;">This system performs sophisticated image morphing and reconstruction using various image processing techniques via Python and OpenCV.
-                                            </div>
-                                        </div>
-                                        <div class="menublock-item__text">
-                                            <h5>Facial Reconstruction System</h5>
-                                        </div>
-                                    </div> <!-- end menublock-item -->
-                                </div> <!-- end s-menublock__slide -->
-
-
-                                <div class="s-menublock__slide swiper-slide">
-                                    <div class="menublock-item">
-                                        <div class="menublock-item__thumb">
-                                            <img src="images/tweet.jpg" style="width: 400px; height:400px;" alt="">
-                                            <div class="description" style="align-content: center; width:350px; height:200px;">
-                                                This application analysed and classified tweets as disaster-related or not for real-time emergency response analysis.
-                                            </div>
-                                        </div>
-                                        <div class="menublock-item__text">
-                                            <h5>Analysis of Disaster Tweets</h5>
-                                        </div>
-                                    </div> <!-- end menublock-item -->
-                                </div> <!-- end s-menublock__slide -->
-
-                                <div class="s-menublock__slide swiper-slide">
-                                    <div class="menublock-item">
-                                        <div class="menublock-item__thumb">
-                                            <img src="images/elms.jpg" style="width: 400px; height:400px;" alt="">
-                                            <div class="description" style="align-content: center; width:350px; height:200px;">
-                                                An e-learning management platform to facilitate online education and student engagement.
-                                            </div>
-                                        </div>
-                                        <div class="menublock-item__text">
-                                            <h5>SimpleLearn</h5>
-                                        </div>
-                                    </div> <!-- end menublock-item -->
-                                </div> <!-- end s-menublock__slide -->
-
-                                <div class="s-menublock__slide swiper-slide">
-                                    <div class="menublock-item">
-                                        <div class="menublock-item__thumb">
-                                            <img src="images/detect.jpg" style="width: 400px; height:400px;" alt="">
-                                            <div class="description"  style="align-content: center; width:300px; height:150px;">
-                                                A model used to detect and recognise objects in an image.
-                                            </div>
-                                        </div>
-                                        <div class="menublock-item__text">
-                                            <h5>R-CNN Object Detection</h5>
-                                        </div>
-                                    </div> <!-- end menublock-item -->
-                                </div> <!-- end s-menublock__slide -->
-
-
-                                <div class="s-menublock__slide swiper-slide">
-                                    <div class="menublock-item">
-                                        <div class="menublock-item__thumb">
-                                            <img src="images/videogame.jpg" style="width: 400px; height:400px;" alt="">
-                                            <div class="description" style="align-content: center; width:350px; height:200px;">
-                                                A comprehensive analysis of global video game sales and generated insightful reports and stories using Tableau.
-                                            </div>
-                                        </div>
-                                        <div class="menublock-item__text">
-                                            <h5>Video Game Sales Analysis </h5>
-                                        </div>
-                                    </div> <!-- end menublock-item -->
-                                </div> <!-- end s-menublock__slide -->
-
-                            </div> <!-- end swiper-wrapper -->
-                        </div> <!-- end s-menublock__slider -->
-
-                    </div>
-                </div> <!-- s-menublock__slider-wrap -->
-
-            </section> <!-- end s-menublock -->
-
-            <footer id="footer" class="s-footer">
-                <div class="row s-footer__main-content" style="justify-content: center;">
-                    <div class="column xl-6 md-12 s-footer__block s-footer__info">
-                        <div class="row">
-                            <div class="column xl-6 lg-12">
-                                <h5>Location</h5>
-                                <p> Houston, Texas - 77025 </p>
-                            </div>
-                            <div class="column xl-6 lg-12">
-                                <h5>Contact</h5>
-                                <ul class="link-list">
-                                    <li>
-                                        <a href="mailto:sathwik.velmala@outlook.com">sathwik.velmala@outlook.com</a>
-                                    </li>
-                                    <li>
-                                        <a href="tel:+17374446526">+1 (737) 444-6526</a>
-                                    </li>
-                                </ul>
-                            </div>
+                    <!-- end s-menublock__top -->
+                    <div class="education-box">
+                        <h3>Master of Science in Data Science</h3>
+                        <p>University of Houston, Houston, TX</p>
+                        <p>January 2023 - May 2024</p>
+                        <div class="coursework">
+                            <p style="font-family: Arial;font-size: 15px; color: black;">
+                                <b>Related Coursework: </b>Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering
+                            </p>
                         </div>
                     </div>
-                </div>
-                <div class="row s-footer__bottom" style="justify-content: center;">
-                    <div class="column xl-6 lg-12">
-                        <ul class="s-footer__social social-list" style="display: flex; justify-content: center; list-style: none; padding: 0; list-style: none;">
-                            <li style="margin: 0 10px;">
-                                <a href="https://www.linkedin.com/in/sathwik-reddy-velmala-72b8b9191/" class="linkedin-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="linkedin-icon-svg" style="fill:rgba(255, 255, 255, 1);">
-                                        <path class="linkedin-path" d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V8.99h3.56v11.46zM5.34 7.56a2.08 2.08 0 0 1-2.08-2.08 2.08 2.08 0 0 1 2.08-2.08c1.15 0 2.08.93 2.08 2.08 0 1.15-.93 2.08-2.08 2.08zm14.9 12.89h-3.56v-5.62c0-1.34-.03-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98v5.72h-3.56V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.44v6.3h-.01z"></path>
-                                    </svg>
-                                    <span class="u-screen-reader-text">LinkedIn</span>
-                                </a>
-                            </li>
-                            <li style="margin: 0 10px;">
-                                <a href="https://github.com/vsathwikr23" class="git-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);" class="git-icon-svg">
-                                        <path class="git-path" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.332-1.754-1.332-1.754-1.087-.744.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.467-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.526 11.526 0 0 1 3.003-.404c1.02.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.624-5.475 5.921.43.37.823 1.096.823 2.211 0 1.595-.014 2.877-.014 3.271 0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
-                                    </svg>
-                                    <span class="u-screen-reader-text">GitHub</span>
-                                </a>
-                            </li>
-                            <li style="margin: 0 10px;">
-                                <a href="mailto:sathwik.velmala@outlook.com" class="outlook-icon">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);" class="outlook-icon-svg">
-                                        <path class="outlook-path" d="M12 12.713l11.053-7.234-22.106-.014L12 12.713zm-12-11.713v20h24v-20h-24zm22 18H2V6.333l10 6.668 10-6.666V19z"></path>
-                                    </svg>
-                                    <span class="u-screen-reader-text">Outlook</span>
-                                </a>
-                            </li>
-                        </ul>
+                    <div class="education-box2" style="background-color: #4682B4; ">
+                        <h3>Software Developer</h3>
+                        <p>SAFERTEK IT SOLUTIONS PVT LTD</p>
+                        <p>February 2021 - December 2022</p>
+                        <div class="coursework">
+                            <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                                <b>Roles and Responsibilities:</b><br />
+                                Developed a web ERP product UWareOne using Python and Django-Rest framework to enable seamless
+                                integration with third-party services, supporting over 10,000 users and boosting efficiency by 30%.<br />
+                                Accelerated development of beta version through agile processes including sprint planning and daily
+                                stand-ups, cutting deployment times by 40% and improving performance and user experience by 30%. <br />
+                                Led a cross-functional team in migrating 99% of complex data structures from SQL Server to MariaDB,
+                                ensuring data integrity and minimal downtime by schema normalization. <br />
+                                Implemented caching mechanisms and database indexing strategies to improve query performance by
+                                60% and reduce the server load by 40%. Automated repetitive tasks and processes using Python, Bash. <br />
+                                Designed and deployed reports and dashboards using SSRS, Tableau, and Python libraries (Seaborn,
+                                Matplotlib), enabling data-driven decisions for stakeholders and boosting customer satisfaction by 35%. <br />
+                                Collaborated with development teams to integrate analytics tools with UWareOne, optimizing performance
+                                to handle large datasets, which led to a 50% reduction in data latency and enhanced user experience.
+                            </p>
+                        </div>
                     </div>
-            </footer>
+
+                    <div class="education-box3" style="background-color: #DC143C; ">
+                        <h3>Data Analyst</h3>
+                        <p>GITCORE Technologies, Hyderabad, India</p>
+                        <p>December 2019 - July 2020</p>
+                        <div class="coursework">
+                            <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                                <b>Roles and Responsibilities:</b><br />
+                                Analysed data using statistical techniques and tools like Python, PowerBi and Excel to discover trends and
+                                patterns in data, resulting in a 15% increase in process efficiency.<br />
+                                Ensured data integrity by checking for errors, missing values, and inconsistencies and documenting any
+                                issues found, thereby increasing the data accuracy by over 40%. <br />
+                                Maintained detailed documentation of processes, methodologies, and data analysis results. <br />
+                                Engaged with cross-functional teams to provide data-driven conclusions and improve operating efficiency. <br />
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="education-box1">
+                        <h3>Bachelor of Technology in Computer Science</h3>
+                        <p>Malla Reddy Engineering College, Hyderabad, India</p>
+                        <p>August 2017 - June 2021</p>
+                        <div class="coursework">
+                            <p style="font-family: Arial;font-size: 15px; color:black;">
+                                <b>Related Coursework:</b>
+                                Machine Learning, Big Data Analytics, Database Management Systems, Object Oriented Programming
+                            </p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- ========================================================================= -->
+
+                <section id="projects" class="s-menublock" style="margin-top: -10%; background-color: white; margin: 50px; border-radius: 5px; padding-bottom: 80px; padding-top: 80px;">
+
+                    <div class="row s-menublock__top">
+                        <div class="column xl-8 lg-12">
+                            <div class="s-menublock__content-header section-header">
+                                <h3 class="text-display-title with-line" style="font-size:60px; text-align: center;">Projects</h3>
+                                <!-- end s-menublock__content-header -->
+                            </div>
+                        </div>
+                    </div> <!-- end s-menublock__top -->
+
+                    <div class="row">
+                        <div class="column xl-12 menublock__slider-nav">
+                            <a class="menu-link">All Projects</a>
+
+                            <div class="menublock-buttons">
+                                <div class="menublock-btn-prev">
+                                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m9.474 5.209s-4.501 4.505-6.254 6.259c-.147.146-.22.338-.22.53s.073.384.22.53c1.752 1.754 6.252 6.257 6.252 6.257.145.145.336.217.527.217.191-.001.383-.074.53-.221.293-.293.294-.766.004-1.057l-4.976-4.976h14.692c.414 0 .75-.336.75-.75s-.336-.75-.75-.75h-14.692l4.978-4.979c.289-.289.287-.761-.006-1.054-.147-.147-.339-.221-.53-.221-.191-.001-.38.071-.525.215z" fill-rule="nonzero" /></svg>
+                                </div>
+                                <div class="menublock-btn-next">
+                                    <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="m14.523 18.787s4.501-4.505 6.255-6.26c.146-.146.219-.338.219-.53s-.073-.383-.219-.53c-1.753-1.754-6.255-6.258-6.255-6.258-.144-.145-.334-.217-.524-.217-.193 0-.385.074-.532.221-.293.292-.295.766-.004 1.056l4.978 4.978h-14.692c-.414 0-.75.336-.75.75s.336.75.75.75h14.692l-4.979 4.979c-.289.289-.286.762.006 1.054.148.148.341.222.533.222.19 0 .378-.072.522-.215z" fill-rule="nonzero" /></svg>
+                                </div>
+                            </div>
+                        </div> <!-- end s-menublock__slider-nav -->
+                    </div>
+
+                    <div class="row s-menublock__slider-wrap">
+                        <div class="column xl-12">
+
+                            <div class="swiper-container s-menublock__slider">
+                                <div class="swiper-wrapper">
+
+                                    <div class="s-menublock__slide swiper-slide">
+                                        <div class="menublock-item">
+                                            <div class="menublock-item__thumb">
+                                                <img src="images/facial.jpg" style="width: 400px; height:400px;" alt="">
+                                                <div class="description" style="align-content: center; width:350px; height:200px;">
+                                                    This system performs sophisticated image morphing and reconstruction using various image processing techniques via Python and OpenCV.
+                                                </div>
+                                            </div>
+                                            <div class="menublock-item__text">
+                                                <h5>Facial Reconstruction System</h5>
+                                            </div>
+                                        </div> <!-- end menublock-item -->
+                                    </div> <!-- end s-menublock__slide -->
+
+
+                                    <div class="s-menublock__slide swiper-slide">
+                                        <div class="menublock-item">
+                                            <div class="menublock-item__thumb">
+                                                <img src="images/tweet.jpg" style="width: 400px; height:400px;" alt="">
+                                                <div class="description" style="align-content: center; width:350px; height:200px;">
+                                                    This application analysed and classified tweets as disaster-related or not for real-time emergency response analysis.
+                                                </div>
+                                            </div>
+                                            <div class="menublock-item__text">
+                                                <h5>Analysis of Disaster Tweets</h5>
+                                            </div>
+                                        </div> <!-- end menublock-item -->
+                                    </div> <!-- end s-menublock__slide -->
+
+                                    <div class="s-menublock__slide swiper-slide">
+                                        <div class="menublock-item">
+                                            <div class="menublock-item__thumb">
+                                                <img src="images/elms.jpg" style="width: 400px; height:400px;" alt="">
+                                                <div class="description" style="align-content: center; width:350px; height:200px;">
+                                                    An e-learning management platform to facilitate online education and student engagement.
+                                                </div>
+                                            </div>
+                                            <div class="menublock-item__text">
+                                                <h5>SimpleLearn</h5>
+                                            </div>
+                                        </div> <!-- end menublock-item -->
+                                    </div> <!-- end s-menublock__slide -->
+
+                                    <div class="s-menublock__slide swiper-slide">
+                                        <div class="menublock-item">
+                                            <div class="menublock-item__thumb">
+                                                <img src="images/detect.jpg" style="width: 400px; height:400px;" alt="">
+                                                <div class="description" style="align-content: center; width:300px; height:150px;">
+                                                    A model used to detect and recognise objects in an image.
+                                                </div>
+                                            </div>
+                                            <div class="menublock-item__text">
+                                                <h5>R-CNN Object Detection</h5>
+                                            </div>
+                                        </div> <!-- end menublock-item -->
+                                    </div> <!-- end s-menublock__slide -->
+
+
+                                    <div class="s-menublock__slide swiper-slide">
+                                        <div class="menublock-item">
+                                            <div class="menublock-item__thumb">
+                                                <img src="images/videogame.jpg" style="width: 400px; height:400px;" alt="">
+                                                <div class="description" style="align-content: center; width:350px; height:200px;">
+                                                    A comprehensive analysis of global video game sales and generated insightful reports and stories using Tableau.
+                                                </div>
+                                            </div>
+                                            <div class="menublock-item__text">
+                                                <h5>Video Game Sales Analysis </h5>
+                                            </div>
+                                        </div> <!-- end menublock-item -->
+                                    </div> <!-- end s-menublock__slide -->
+
+                                </div> <!-- end swiper-wrapper -->
+                            </div> <!-- end s-menublock__slider -->
+
+                        </div>
+                    </div> <!-- s-menublock__slider-wrap -->
+
+                </section> <!-- end s-menublock -->
+
+                <footer id="footer" class="s-footer" style="background-image: url('images/4.jpg');">
+                    <div class="row s-footer__main-content" style="justify-content: center;">
+                        <div class="column xl-6 md-12 s-footer__block s-footer__info">
+                            <div class="row">
+                                <div class="column xl-6 lg-12">
+                                    <h5>Location</h5>
+                                    <p style="color: white;"> Houston, Texas - 77025 </p>
+                                </div>
+                                <div class="column xl-6 lg-12">
+                                    <h5>Contact</h5>
+                                    <ul class="link-list">
+                                        <li>
+                                            <a href="mailto:sathwik.velmala@outlook.com">sathwik.velmala@outlook.com</a>
+                                        </li>
+                                        <li>
+                                            <a href="tel:+17374446526">+1 (737) 444-6526</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row s-footer__bottom" style="justify-content: center;">
+                        <div class="column xl-6 lg-12">
+                            <ul class="s-footer__social social-list" style="display: flex; justify-content: center; list-style: none; padding: 0; list-style: none;">
+                                <li style="margin: 0 10px;">
+                                    <a href="https://www.linkedin.com/in/sathwik-reddy-velmala-72b8b9191/" class="linkedin-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" class="linkedin-icon-svg" style="fill:rgba(255, 255, 255, 1);">
+                                            <path class="linkedin-path" d="M22.23 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.21 0 22.23 0zM7.12 20.45H3.56V8.99h3.56v11.46zM5.34 7.56a2.08 2.08 0 0 1-2.08-2.08 2.08 2.08 0 0 1 2.08-2.08c1.15 0 2.08.93 2.08 2.08 0 1.15-.93 2.08-2.08 2.08zm14.9 12.89h-3.56v-5.62c0-1.34-.03-3.08-1.88-3.08-1.88 0-2.17 1.47-2.17 2.98v5.72h-3.56V8.99h3.42v1.57h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.26 2.37 4.26 5.44v6.3h-.01z"></path>
+                                        </svg>
+                                        <span class="u-screen-reader-text">LinkedIn</span>
+                                    </a>
+                                </li>
+                                <li style="margin: 0 10px;">
+                                    <a href="https://github.com/vsathwikr23" class="git-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);" class="git-icon-svg">
+                                            <path class="git-path" d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61-.546-1.385-1.332-1.754-1.332-1.754-1.087-.744.083-.729.083-.729 1.205.085 1.84 1.236 1.84 1.236 1.07 1.834 2.807 1.304 3.492.997.108-.776.418-1.305.762-1.605-2.665-.305-5.466-1.334-5.466-5.931 0-1.31.467-2.381 1.235-3.221-.123-.303-.535-1.523.117-3.176 0 0 1.008-.322 3.301 1.23a11.526 11.526 0 0 1 3.003-.404c1.02.005 2.045.138 3.003.404 2.291-1.553 3.297-1.23 3.297-1.23.654 1.653.242 2.873.12 3.176.77.84 1.233 1.911 1.233 3.221 0 4.61-2.804 5.624-5.475 5.921.43.37.823 1.096.823 2.211 0 1.595-.014 2.877-.014 3.271 0 .322.218.694.825.576C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"></path>
+                                        </svg>
+                                        <span class="u-screen-reader-text">GitHub</span>
+                                    </a>
+                                </li>
+                                <li style="margin: 0 10px;">
+                                    <a href="mailto:sathwik.velmala@outlook.com" class="outlook-icon">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" style="fill:rgba(255, 255, 255, 1);" class="outlook-icon-svg">
+                                            <path class="outlook-path" d="M12 12.713l11.053-7.234-22.106-.014L12 12.713zm-12-11.713v20h24v-20h-24zm22 18H2V6.333l10 6.668 10-6.666V19z"></path>
+                                        </svg>
+                                        <span class="u-screen-reader-text">Outlook</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                </footer>
         </section>
     </div>
     <div class="scroll-to-top" style="font-weight: 900; border: 2px solid #ddd; background-color: #36454F" id="scrollToTop">
