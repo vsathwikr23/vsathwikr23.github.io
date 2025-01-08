@@ -174,6 +174,10 @@
             display: block;
         }
 
+        .education-box4:hover .coursework {
+            display: block;
+        }
+
         .education-box3:hover .coursework {
             display: block;
         }
@@ -190,10 +194,28 @@
             cursor: pointer;
             height: 300px;
             transition: background-color 0.3s, box-shadow 0.3s;
-            background-image: url('images/safertek-logo.png');
+            background-image: url('images/genpact.png');
             background-size: cover;
             background-position: 20% 44%;
             opacity: 2.2;
+            color: white;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+
+        .education-box4 {
+            position: relative;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin: 20px 0;
+            cursor: pointer;
+            height: 300px;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            background-image: url('images/rv-logo.png');
+            background-size: cover;
+            background-position: center;
+            opacity: 2.2;
+            background-repeat: no-repeat;
             color: white;
             margin-left: 10%;
             margin-right: 10%;
@@ -224,6 +246,13 @@
         }
 
         .education-box2:hover {
+            background-color: #f5f5f5;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            transform: scale(1.02);
+            z-index: 2;
+        }
+
+        .education-box4:hover {
             background-color: #f5f5f5;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
             transform: scale(1.02);
@@ -262,6 +291,22 @@
         }
 
         .education-box2 p {
+            margin: 5px 0;
+            font-family: Cooper;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .education-box4 h3 {
+            font-size: 1.5em;
+            margin-bottom: 5px;
+            font-family: Cooper;
+            font-weight: bold;
+            color: white;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .education-box4 p {
             margin: 5px 0;
             font-family: Cooper;
             color: white;
@@ -426,7 +471,7 @@
                     <br /><br />
                     <img style="height:250px;width:250px;margin-top: -150px;" src="me-circle.png" alt="Profile Image">
                     <h2 style="color:white;margin:20px;">Hello, I am <span class="highlight-name">Sathwik Velmala</span></h2>
-                    <p class="s-intro__desc lead" style="text-align:center;">| Software Developer | Dataphile | <br> | Data Science Graduate | </p>
+                    <p class="s-intro__desc lead" style="text-align:center;">| Data Scientist | Dataphile | <br> | Data Science Graduate | </p>
                     <br />
                     <a href="#about" id="more-about-me" class="scroll-btn">More about me</a>
                     <ul class="s-header__nav-social social-list" style="display: flex; justify-content: center; list-style: none; padding: 0; list-style: none;">
@@ -472,63 +517,17 @@
                 </div>
                 <div class="s-about__content-main">
                     <p class="attention-getter" style="text-align: justify; font-size: 20px; line-height: 1.4;">
-                        With over 30 months of professional experience as a Software Developer at SAFERTEK IT Solutions and a Data Analyst at Gitcore Solutions,
-                        I have a proven track record of developing an ERP product and providing data driven insights to different clients based on the provided data. <br /><br />My expertise includes Software Development using Python, DJango and REST framework, Database Management using SQL Server, MySQL, OracleDB,
-                        Analysing complex datasets using visualization tools like Python, Excel, Tableau and PowerBi, leveraging Data Analytics using Spark and Hadoop and various data science projects including Object Detection, Facial Reconstruction, Analysing Disaster Tweets.
-                        <br /><br /> I also have a strong academic background with a Masters degree in Data Science from the University of Houston. I am passionate about applying my knowledge in data science to generate insights that promote real-world impact, helping organizations make key strategic decisions.
+                        With over 3 years of professional experience as a Data Scientist, I have a proven track record of designing and implementing ETL pipelines, Data Analysis, creating and deploying machine learning models for fraud detection and
+                        developing interactive dashboards to derive data driven solutions. <br /><br /> I also have a strong academic background with a Masters degree in Data Science from the University of Houston. I am passionate about applying my knowledge in data science to generate insights that promote real-world impact, helping organizations make key strategic decisions.
                         <br /><br /> Apart from this, I have a strong enthusiam for sports especially basketball, football and cricket. I also love watching movies and exploring various cuisines of food from all around the world.
-                    </p><!--<h3>Skills and Certifications</h3>
-                    <p class="attention-getter" style=" font-size:20px;">
-                        <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, SQL Server, OracleDB. <br />
-                        <b>Programming Languages:</b> Python, C, Java, C#, JavaScript, Matlab, SQL <br />
-                        <b>Web Technologies & Frameworks:</b> HTML, CSS, Django, Flask, jQuery <br />
-                        <b>Machine Learning and Deep Learning:</b> Keras, TensorFlow, PyTorch, NumPy, Pandas, OpenCV, sci-kit
-                        learn, Convolutional Neural Networks, Natural Language Processing, Dlib, seaborn, Matplotlib, SciPy. <br />
-                        <b>Big Data Frameworks: </b>Hadoop, Spark <br />
-                        <b>Data Visualization tools: </b>Tableau, Microsoft PowerBi, Spotfire <br />
-                        <b>Cloud platforms: </b>GCP, AWS, Azure <br />
-                        <b>Version Control: </b>Git <br />
-                        <b>Google Cloud Platform Certification</b> in Architecting with Google Compute Engine
-                    </p>-->
-                    <div class="s-about__content-btn">
-                        <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium u-fullwidth">Download Resume</a>
-                    </div>
-                </div>
+                        <div class="s-about__content-btn">
+                            <a href="Sathwik Reddy Velmala - Data Scientist.pdf" class="btn btn--stroke btn--medium u-fullwidth">Download Resume</a>
+                        </div>
+</div>
             </div>
         </div>
     </section>
-        <!--<section id="about" class="s-about" style="background-color: white; border-radius: 5px; margin: 20px; padding-bottom: 80px; padding-top: 80px;">
-            <div class="row s-about__content">
-                
-                <div class="column xl-12 s-about__content-grid">
-                    <div class="s-about__content-header section-header">
-                        <h3 class="text-display-title with-line" style="font-size: 60px; text-align: center;">About Me</h3>
-                    </div>
-
-                    <div class="s-about__content-main grid-block" style="display: flex; align-items: center; gap: 20px;">
-                        
-                        <div class="s-about__content-media" style="flex: 1; max-width: 40%;">
-                            <img class="s-about__media-big" src="images/my_1.jpg" srcset="images/my_1.jpg 1x" alt="Sathwik's photo" style="width: 100%; border-radius: 0px;">
-                        </div>
-
-                        
-                        <div class="s-about__content-text" style="flex: 1; max-width: 60%;">
-                            <p class="attention-getter" style="text-align: justify; font-size: 20px; line-height: 1.4;">
-                                With over 30 months of professional experience as a Software Developer at SAFERTEK IT Solutions and a Data Analyst at Gitcore Solutions,
-                                I have a proven track record of developing an ERP product and providing data driven insights to different clients based on the provided data. <br /><br />My expertise includes Software Development using Python, DJango and REST framework, Database Management using SQL Server, MySQL, OracleDB,
-                                Analysing complex datasets using visualization tools like Python, Excel, Tableau and PowerBi, leveraging Data Analytics using Spark and Hadoop and various data science projects including Object Detection, Facial Reconstruction, Analysing Disaster Tweets.
-                                <br /><br /> I also have a strong academic background with a Masters degree in Data Science from the University of Houston. I am passionate about applying my knowledge in data science to generate insights that promote real-world impact, helping organizations make key strategic decisions.
-                                <br /><br /> Apart from this, I have a strong enthusiam for sports especially basketball, football and cricket. I also love watching movies and exploring various cuisines of food from all around the world.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="s-about__content-btn" style="display: flex; justify-content: center; align-items: center;">
-                        <a href="RESUME - SATHWIK REDDY VELMALA.pdf" class="btn btn--stroke btn--medium">Download Resume</a>
-                    </div>
-                </div>
-            </div>
-        </section>-->
-
+       
         <!-------- Skills and Certifications Section-->
 
         <section id="skills" class="s-menublock4" style="background-color: white; border-radius: 5px; margin: 20px; padding-bottom: 80px; padding-top: 80px;">
@@ -536,22 +535,20 @@
                 <!-- Skills and Certifications Block -->
                 <div class="column xl-12 s-about__content-grid">
                     <div class="s-about__skills-header section-header">
-                        <h3 class="text-display-title with-line" style="font-size: 60px; text-align: center;">Skills and Certifications</h3>
+                        <h3 class="text-display-title with-line" style="font-size: 60px; text-align: center;">Skills</h3>
                     </div>
 
                     <div class="s-about__skills-content" style="padding: 20px; font-size: 20px;">
                         <p>
-                            <b>Database and Client/Server Technologies:</b> RESTful APIs, MariaDB, NoSQL, MySQL, SQL Server, OracleDB. <br />
-                            <b>Programming Languages:</b> Python, C, Java, C#, JavaScript, Matlab, SQL <br />
-                            <b>Web Technologies & Frameworks:</b> HTML, CSS, Django, Flask, jQuery <br />
-                            <b>Machine Learning and Deep Learning:</b> Keras, TensorFlow, PyTorch, NumPy, Pandas, OpenCV, sci-kit
-                            learn, Convolutional Neural Networks, Natural Language Processing, Dlib, seaborn, Matplotlib, SciPy. <br />
-                            <b>Big Data Frameworks:</b> Hadoop, Spark <br />
-                            <b>Data Visualization tools:</b> Tableau, Microsoft PowerBi, Spotfire <br />
-                            <b>Cloud platforms:</b> GCP, AWS, Azure <br />
+                            <b>Programming Languages: </b> Python, SQL, R <br />
+                            <b>Databases: </b> MySQL, PostgreSQL, MongoDB, Amazon Redshift, Snowflake, MS SQL Server, NoSQL <br />
+                            <b>Machine Learning & AI:</b> XGBoost, Random Forest, Isolation Forest, Autoencoders, CNN, RNN, LSTM, GANs, ARIMA, SVM, DecisionTrees, K-Means Clustering, Transformer Models, Scikit-learn, TensorFlow, PyTorch, LightGBM, SHAP, LIME  <br />
+                            <b>Cloud Platforms:</b>AWS (SageMaker, Lambda, Glue, Redshift, Kinesis), Azure (Machine Learning, Data Lake, Blob Storage), GCP (BigQuery, Google Cloud Storage, AI Platform) <br />
+                            <b>Big Data & Data Engineering:</b>  Apache Spark, PySpark, Hadoop, Hive, Apache Kafka, ETL Pipelines, Apache Airflow <br />
+                            <b>Data Visualization & Reporting:</b> Tableau, Power BI, AWS QuickSight, Matplotlib, Seaborn <br />
+                            <b> Other Tools and Technologies:</b> Docker, Kubernetes, Jenkins, JIRA, ServiceNow, Pandas, NumPy, Git, AWS CloudWatch <br />
                             <b>Version Control:</b> Git <br />
-                            <b>Google Cloud Platform Certification</b> in Architecting with Google Compute Engine
-                        </p>
+                       </p>
                     </div>
                 </div>
             </div>
@@ -559,78 +556,103 @@
 
                 <!-- # menu block
             ================================================== -->
-                <section id="edu-exp" class="s-menublock" style="background-color: white; border-radius: 5px; padding-bottom: 80px; padding-top: 80px; margin: 20px;">
-                    <div class="row s-menublock__top">
-                        <div class="column xl-8 lg-12">
-                            <div class="s-menublock__content-header section-header">
-                                <h3 class="text-display-title with-line" style="font-size:60px; text-align: center;"> Education and Experience</h3>
-                            </div>
-                            <!-- end s-menublock__content-header -->
-                        </div>
+        <section id="edu-exp" class="s-menublock" style="background-color: white; border-radius: 5px; padding-bottom: 80px; padding-top: 80px; margin: 20px;">
+            <div class="row s-menublock__top">
+                <div class="column xl-8 lg-12">
+                    <div class="s-menublock__content-header section-header">
+                        <h3 class="text-display-title with-line" style="font-size:60px; text-align: center;"> Education and Experience</h3>
                     </div>
-                    <!-- end s-menublock__top -->
-                    <div class="education-box">
-                        <h3>Master of Science in Data Science</h3>
-                        <p>University of Houston, Houston, TX</p>
-                        <p>January 2023 - May 2024</p>
-                        <div class="coursework">
-                            <p style="font-family: Arial;font-size: 15px; color: black;">
-                                <b>Related Coursework: </b>Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering
-                            </p>
-                        </div>
-                    </div>
-                    <div class="education-box2" style="background-color: #4682B4; ">
-                        <h3>Software Developer</h3>
-                        <p>SAFERTEK IT SOLUTIONS PVT LTD</p>
-                        <p>February 2021 - December 2022</p>
-                        <div class="coursework">
-                            <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
-                                <b>Roles and Responsibilities:</b><br />
-                                Developed a web ERP product UWareOne using Python and Django-Rest framework to enable seamless
-                                integration with third-party services, supporting over 10,000 users and boosting efficiency by 30%.<br />
-                                Accelerated development of beta version through agile processes including sprint planning and daily
-                                stand-ups, cutting deployment times by 40% and improving performance and user experience by 30%. <br />
-                                Led a cross-functional team in migrating 99% of complex data structures from SQL Server to MariaDB,
-                                ensuring data integrity and minimal downtime by schema normalization. <br />
-                                Implemented caching mechanisms and database indexing strategies to improve query performance by
-                                60% and reduce the server load by 40%. Automated repetitive tasks and processes using Python, Bash. <br />
-                                Designed and deployed reports and dashboards using SSRS, Tableau, and Python libraries (Seaborn,
-                                Matplotlib), enabling data-driven decisions for stakeholders and boosting customer satisfaction by 35%. <br />
-                                Collaborated with development teams to integrate analytics tools with UWareOne, optimizing performance
-                                to handle large datasets, which led to a 50% reduction in data latency and enhanced user experience.
-                            </p>
-                        </div>
-                    </div>
+                    <!-- end s-menublock__content-header -->
+                </div>
+            </div>
 
-                    <div class="education-box3" style="background-color: #DC143C; ">
-                        <h3>Data Analyst</h3>
-                        <p>GITCORE Technologies, Hyderabad, India</p>
-                        <p>December 2019 - July 2020</p>
-                        <div class="coursework">
-                            <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
-                                <b>Roles and Responsibilities:</b><br />
-                                Analysed data using statistical techniques and tools like Python, PowerBi and Excel to discover trends and
-                                patterns in data, resulting in a 15% increase in process efficiency.<br />
-                                Ensured data integrity by checking for errors, missing values, and inconsistencies and documenting any
-                                issues found, thereby increasing the data accuracy by over 40%. <br />
-                                Maintained detailed documentation of processes, methodologies, and data analysis results. <br />
-                                Engaged with cross-functional teams to provide data-driven conclusions and improve operating efficiency. <br />
-                            </p>
-                        </div>
-                    </div>
+            <div class="education-box4" style="background-color: #4682B4;">
+                <h3>Data Scientist</h3>
+                <p>Red Ventures </p>
+                <p>January 2024 - Present</p>
+                <div class="coursework">
+                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                        <b>Roles and Responsibilities:</b><br />
+                        • Designed and implemented automated ETL pipelines using Apache Airflow and AWS Glue, integrating data from diverse sources
+                        such as Amazon S3, Snowflake, and MongoDB for real-time churn prediction.<br />
+                        • Leveraged Databricks and PySpark to process large datasets, extracting key features from customer behavior, transaction history,
+                        and demographics, significantly improving model accuracy and performance.<br />
+                        • Built and optimized churn prediction models using advanced machine learning algorithms like XGBoost, LightGBM, and TensorFlow,
+                        achieving 94% accuracy and reducing churn by 25%.<br />
+                        • Deployed models to AWS SageMaker, utilizing AWS Lambda for real-time inference and automated hyperparameter tuning to scale
+                        churn prediction across millions of customer records. Integrated with CRM systems for targeted retention actions.<br />
+                        • Developed interactive dashboards in Power BI, enabling stakeholders to monitor churn trends, identify high-risk segments, and
+                        evaluate the effectiveness of retention strategies in real-time.<br />
+                        • Incorporated Explainable AI (XAI) tools like SHAP and LIME to provide transparent model explanations, ensuring stakeholder trust
+                        and actionable insights to inform customer engagement and retention campaigns.
+                    </p>
+                </div>
+            </div>
 
-                    <div class="education-box1">
-                        <h3>Bachelor of Technology in Computer Science</h3>
-                        <p>Malla Reddy Engineering College, Hyderabad, India</p>
-                        <p>August 2017 - June 2021</p>
-                        <div class="coursework">
-                            <p style="font-family: Arial;font-size: 15px; color:black;">
-                                <b>Related Coursework:</b>
-                                Machine Learning, Big Data Analytics, Database Management Systems, Object Oriented Programming
-                            </p>
-                        </div>
-                    </div>
-                </section>
+            <!-- end s-menublock__top -->
+            <div class="education-box">
+                <h3>Master of Science in Data Science</h3>
+                <p>University of Houston, Houston, TX</p>
+                <p>January 2023 - May 2024</p>
+                <div class="coursework">
+                    <p style="font-family: Arial;font-size: 15px; color: black;">
+                        <b>Related Coursework: </b>Python Programming, Data Analytics and Visualization, Relational Databases, Data Engineering
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-box2" style="background-color: #4682B4; ">
+                <h3>Data Scientist</h3>
+                <p>Genpact</p>
+                <p>February 2021 - December 2022</p>
+                <div class="coursework">
+                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                        <b>Roles and Responsibilities:</b><br />
+                        • Developed fraud detection models using XGBoost and Isolation Forest, achieving 95% accuracy in identifying fraudulent
+                        transactions, leveraging Python and Scikit-learn to implement machine learning algorithms for scalable fraud prevention.<br />
+                        • Trained and deployed fraud detection models on AWS SageMaker, using automated hyperparameter tuning and model evaluation
+                        techniques to optimize performance, for real-time, high-accuracy fraud detection in dynamic e-commerce environments.<br />
+                        • Integrated AWS Kinesis for real-time transaction data streaming, enabling immediate fraud detection and reducing transaction
+                        processing time by 40%. Used AWS Lambda to deploy models with minimal latency for real-time decision-making.<br />
+                        • Built and optimized ETL pipelines with AWS Glue to clean, transform, and load high-velocity transaction data from Amazon S3 into
+                        machine learning models, streamlining data processing and ensuring accurate predictions.<br />
+                        • Utilized PyOD (Python Outlier Detection) library for anomaly detection, improving model precision by reducing false positives and
+                        enhancing overall fraud detection performance.<br />
+                        • Created real-time monitoring dashboards in AWS QuickSight to visualize fraud trends, track KPIs, and provide actionable insights
+                        to the fraud prevention team, improving decision-making and accelerating response times to emerging threats.<br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-box3" style="background-color: #DC143C; ">
+                <h3>Data Analyst</h3>
+                <p>GITCORE Technologies, Hyderabad, India</p>
+                <p>December 2019 - July 2020</p>
+                <div class="coursework">
+                    <p style="font-family: Arial; font-size: 15px; color: black; text-shadow:none;">
+                        <b>Roles and Responsibilities:</b><br />
+                        • Conducted advanced data analysis using Python, Power BI, and Excel to uncover trends, enhancing decision-making and improving
+                        process efficiency by 15%.<br />
+                        • Ensured data integrity by identifying errors, missing values, and inconsistencies, increasing data accuracy by over 40%. <br />
+                        • Developed interactive dashboards and visualizations in Power BI, enabling stakeholders to easily interpret key performance
+                        metrics. <br />
+                        • Automated data processing tasks, reducing manual effort by 30% and ensuring timely delivery of actionable insights.  <br />
+                    </p>
+                </div>
+            </div>
+
+            <div class="education-box1">
+                <h3>Bachelor of Technology in Computer Science</h3>
+                <p>Malla Reddy Engineering College, Hyderabad, India</p>
+                <p>August 2017 - June 2021</p>
+                <div class="coursework">
+                    <p style="font-family: Arial;font-size: 15px; color:black;">
+                        <b>Related Coursework:</b>
+                        Machine Learning, Big Data Analytics, Database Management Systems, Object Oriented Programming
+                    </p>
+                </div>
+            </div>
+        </section>
 
                 <!-- ========================================================================= -->
 
@@ -752,7 +774,7 @@
                             <div class="row">
                                 <div class="column xl-6 lg-12">
                                     <h5>Location</h5>
-                                    <p style="color: white;"> Houston, Texas - 77025 </p>
+                                    <p style="color: white;"> USA </p>
                                 </div>
                                 <div class="column xl-6 lg-12">
                                     <h5>Contact</h5>
